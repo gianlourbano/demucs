@@ -23,6 +23,8 @@ th = torch.hub.load_state_dict_from_url(
 #th['klass'] = HDemucs
 assert th['klass'] == HTDemucs
 
+th['kwargs']['use_train_segment'] = False
+
 model = load_model(th)
 
 model.eval()
