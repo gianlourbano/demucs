@@ -35,7 +35,4 @@ torch.onnx.export(model,
                 dynamo=True,
                 verify=True,
                 report=True,
-                input_names=['input'],
-                output_names=['output'],
-                dynamic_axes={'input': { 2: 'audio_len'}},
             ).save("htdemucs.onnx")
